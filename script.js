@@ -21,6 +21,14 @@ function clearDisplay(){
 }
 
 function calculate(){
+    const regex = /^\s*([+-]?\d+(\.\d+)?)\s*$/;
+
+    // Check if the input matches the regular expression
+    if (!regex.test(display.value)) {
+        alert("Invalid input");
+        return;
+    }
+
    // const regex = /^[+-]?\d+(\.\d+)?$/;
     // const regex = /^[+-]?\d+(\.\d+)?$/;
     // if(!regex.test(display.value)){
